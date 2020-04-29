@@ -1,0 +1,19 @@
+div{
+    padding: 100px;
+    margin: 100px;
+    background-color: silver;
+
+} 
+body{
+    background-color: black;;
+}
+.button{
+    padding:20px;
+    background-color: aliceblue;
+    color:palevioletred;
+    cursor: move;
+}
+a:hover{
+    color:blue;
+    cursor: move;
+}

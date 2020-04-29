@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function validate()
+            {
+                var usrname=document.getElementById("uname").value;
+                var passwrd=document.getElementById("pass").value;
+                
+                var usrregx=new RegExp("E00","i");    // E00 must be present anywhere in the username(i makes it case insensitive)
+                var passregx=/@/;    // @ must be present anywhere in the password (yhis is second method)
+                if(!usrregx.test(usrname))
+                {
+                    alert("invalid username");
+                    return false ;
+                }
+                else if(!passregx.test(passwrd))
+                {
+                    alert("invalid password ");
+                    document.getElementById("labelp").style.visibility="visible";
+                     return false;
+                }
+                 else
+                    return true;
+
+            }
+            
+ 
+        </script>
+    </head>
+ 
+
+    <body>
+        <form onsubmit="return validate()" action="message.html" ><!--this tag helps to reload the page-->
+
+            <input type="text" id="uname" placeholder="username"><br><br>
+            
+            
+            <input type="password" id="pass" placeholder="password">
+            <label  id="labelp" style="color:red; visibility:hidden;">Invalid(@ required)</label><br><br>
+
+            <button type="submit" >submit</button>
+        
+        </form>
+
+    </body>
+</html>

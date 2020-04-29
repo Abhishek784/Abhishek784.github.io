@@ -1,0 +1,95 @@
+body{
+    margin: 0px;
+}
+.container
+{
+    width: 968px;
+    margin:0px auto;
+   
+}
+.header{
+    background-color: teal;
+    height: 80px;
+    width: 964px ;
+    border: solid 2px black;
+    color:white;
+    border: radius top 3px;;
+}
+
+#nav{
+    background-color: black;
+    width: 964px;
+    border: solid 2px black;
+    height: 50px;
+
+}
+#nav ul li {
+    display: inline;
+}
+#nav ul li a{
+    text-decoration: none;
+    padding:  0em 2.5em;
+    transition: all 0.5s ;
+}
+
+#nav ul li a:hover{
+    background-color: white;
+    color: black;
+    transform: scale(1.2);
+}
+.sidebar{
+    background-color: grey;
+    height:1000px;
+    width:200px;
+    border: solid 2px black;
+    float:left;
+}
+.main{
+    float: left;
+    background-color: rgb(218, 211, 183);
+    width:762px;
+    border-right: solid 2px black;
+    border-bottom:solid 2px black;
+    border-top: solid 2px black;
+    height:1000px
+}
+.box1{
+    background-color: darkcyan;
+    border-radius: 6px;
+    border: solid 2px black;
+    padding: 10px;
+    width: 300px;
+    margin:20px;
+    float: left;
+}
+.box2{
+    background-color: darkcyan;
+    border-radius: 6px;
+    border: solid 2px black;
+    padding: 10px;
+    width: 300px;
+    margin:20px;
+    float: left;
+}
+img{
+    margin: 3px;
+    align-content: center;
+}
+p.center{
+    display: block;
+    text-align: center;
+}
+h1{
+   text-align: center;
+   color: darkred;
+    }
+@media(max-width:700px)
+{
+    .sidebar{
+        display:none;
+    }
+    .box2,.box1{
+        width: 250px;
+    }
+
+}

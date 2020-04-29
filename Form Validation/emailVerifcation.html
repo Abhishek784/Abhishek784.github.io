@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function validate()
+            {
+                var mobileNum=document.getElementById("mail").value;
+                var rgx=/^([a-z A-Z 0-9/.-]+)@([a-z A-Z 0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/;//here "^" denotes start of exp and "$" denotes end
+                
+                if(rgx.test(mobileNum))
+                {
+                    document.getElementById("labelp").innerHTML="valid";
+                    document.getElementById("labelp").style.visibility="visible";
+                    document.getElementById("labelp").style.color="green";
+                    
+                   
+                }
+                else
+                {
+                   
+                    document.getElementById("labelp").style.visibility="visible";
+                    document.getElementById("labelp").style.color="red";
+                    document.getElementById("mail").style.border="red 2px solid";
+                    document.getElementById("labelp").innerHTML="invalid";
+                    
+                    
+                }
+            
+            }
+            
+ 
+        </script>
+    </head>
+ 
+
+    <body>
+        <form  ><!--this tag helps to reload the page-->
+
+            <input type="text" id="mail" placeholder="email"/>
+            <label  id="labelp" style="color:red;visibility: hidden; ">Invalid</label><br><br>
+
+            <button type="button" onclick="validate()">submit</button>
+        
+        </form>
+
+    </body>
+</html>
+

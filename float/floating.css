@@ -1,0 +1,28 @@
+h1,h2{
+    background-color: green;
+    color:yellow
+}
+div.div1{
+    background-color: red;
+    color: white;
+    width:50%;
+    float: left;
+}
+div.div2{
+    background-color:black;
+    color: white;
+    width:50%;
+    float: right;
+}
+p{
+    border: green 2px solid;
+
+}
+p.fixed{
+    position:fixed;
+    top:500px;
+}
+p.ara{
+    position: absolute;
+    top: 550px;
+}

@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function validate()
+            {
+                var mobileNum=document.getElementById("mnum").value;
+                var rgx=/^[7-9][0-9]{9}$/ ;//here "^" denotes start of exp and "$" denotes end
+                
+                if(rgx.test(mobileNum))
+                {
+                   document.getElementById("labelp").innerHTML="valid";
+                    document.getElementById("labelp").style.visibility="visible";
+                    document.getElementById("labelp").style.color="green";
+                    
+                   
+                }
+                else
+                {
+                    document.getElementById("labelp").innerHTML="invalid";
+                    document.getElementById("labelp").style.visibility="visible";
+                    document.getElementById("labelp").style.color="red";
+                    
+                    
+                }
+            
+            }
+            
+ 
+        </script>
+    </head>
+ 
+
+    <body>
+        <form  ><!--this tag helps to reload the page-->
+
+            <input type="text" id="mnum" placeholder="mobile no"/>
+            <label  id="labelp" style="color:red;visibility: hidden; ">Invalid</label><br><br>
+
+            <button type="button" onclick="validate()">submit</button>
+        
+        </form>
+
+    </body>
+</html>
+
+7999999999

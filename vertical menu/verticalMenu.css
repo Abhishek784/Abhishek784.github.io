@@ -1,0 +1,22 @@
+ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+ul li a{
+    text-decoration: none;
+    background-color: rgb(0,0);
+    color: papayawhip; 
+    display: block;
+    width: 80px;
+    margin: 5px;
+    padding: 8px;
+    border:1px solid red;
+    text-align: center;
+    height:15px;
+    line-height: 15px;
+}
+ul li a:hover{
+    background-color: peru;
+    color: black;
+}

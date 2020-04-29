@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function validate()
+            {
+                var usrname=document.getElementById("uname").value;
+                var passwrd=document.getElementById("pass").value;
+                
+                var usrregx=/[a-xA-X]00/;    // any char between a-x or A-X with 00 must be present anywhere in the username( example- p00 or k00 or P00)
+                var passregx=/[^a-xA-X1-9]/;    // special char must be present anywhere in the password (yhis is second method)
+                if(!usrregx.test(usrname))
+                {
+                    alert("invalid username");
+                    return false ;
+                }
+                else if(!passregx.test(passwrd))
+                {
+                    alert("invalid password ");
+                    document.getElementById("labelp").style.visibility="visible";
+                     return false;
+                }
+                else
+                    return true;
+
+            }
+            
+ 
+        </script>
+    </head>
+ 
+
+    <body>
+        <form onsubmit="return validate()" action="message.html" ><!--this tag helps to reload the page-->
+
+            <input type="text" id="uname" placeholder="username"><br><br>
+            
+            
+            <input type="password" id="pass" placeholder="password">
+            <label  id="labelp" style="color:red; visibility:hidden;">Invalid( special char required)</label><br><br>
+
+            <button type="submit" >submit</button>
+        
+        </form>
+
+    </body>
+</html>

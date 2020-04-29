@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <script type="text/javascript">
+
+            function validate()
+            {
+                var usrname=document.getElementById("uname");
+                var password=document.getElementById("pass");
+                
+                if(usrname.value.trim()=="" || password.value=="")// trim() considers space as no value is entered
+                {
+                    alert("empty fields not allowed")
+                    uname.style.border="solid 2px red"
+                    return false;
+                }
+                if(password.value.length<5)
+                {
+                    document.getElementById("labelp").style.visibility="visible";
+                    return false;
+                }
+                else
+                    true;
+
+            }
+            
+ 
+        </script>
+    </head>
+ 
+
+    <body>
+        <form onsubmit="return validate()" action="message.html" ><!--this tag helps to reload the page-->
+
+            <input type="text" id="uname" placeholder="username"><br><br>
+            
+            
+            <input type="password" id="pass" placeholder="password">
+            <label  id="labelp" style="color:red; visibility:hidden;">Invalid(atleast 5 char required)</label><br><br>
+
+            <button type="submit" >submit</button>
+        
+        </form>
+
+    </body>
+</html>
